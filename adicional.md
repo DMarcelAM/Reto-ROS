@@ -46,11 +46,11 @@ catkin build
 
 ### 3) Creación de los Nodos
 
-Vamos a comenzar creando el archivo `string_publisher.py`, donde implementaremos un publisher. El contenido de este archivo se encuentra aquí.
+Vamos a comenzar creando el archivo `string_publisher.py`, donde implementaremos un publisher. El contenido de este archivo se encuentra [aquí](https://github.com/DMarcelAM/Reto-ROS/tree/main/reto_ros/src/string_publisher.py).
 
 <img src="Imagenes/image3.png" width ="380" height=200><br>
 
-Ahora crearemos el archivo `string_subscriber.py`, donde implementaremos un subscriber. El contenido de este archivo se encuentra aquí.
+Ahora crearemos el archivo `string_subscriber.py`, donde implementaremos un subscriber. El contenido de este archivo se encuentra [aquí](https://github.com/DMarcelAM/Reto-ROS/tree/main/reto_ros/src/string_subscriber.py).
 
 <img src="Imagenes/image4.png" width ="380" height=200><br>
 
@@ -63,13 +63,13 @@ chmod +x string_subscriber.py
 ```
 ### 4) Creación del modelo URDF
 
-Crearemos un archivo XML y lo ubicamos en el directorio URDF, este será el modelo en el formato urdf. Puede ver el contenido del robot aquí.
+Crearemos un archivo XML y lo ubicamos en el directorio URDF, este será el modelo en el formato urdf. Puede ver el contenido del robot [aquí](https://github.com/DMarcelAM/Reto-ROS/blob/main/reto_ros/urdf/robot.urdf).
 
 <img src="Imagenes/image7.png" width ="380" height=400><br>
 
 ### 5) Creación de los archivos launch
 
-Primero vamos a crear el archivo `.launch` que ejecute los nodos `string_publisher.py` y `string_subscriber.py`. Puede ver el contenido del archivo aquí.
+Primero vamos a crear el archivo `.launch` que ejecute los nodos `string_publisher.py` y `string_subscriber.py`. Puede ver el contenido del archivo [aquí](https://github.com/DMarcelAM/Reto-ROS/blob/main/reto_ros/launch/launch_string.launch).
 
 <img src="Imagenes/image5.png" width ="380" height=200><br>
 
@@ -81,7 +81,7 @@ roslaunch reto_ros launch1.launch
 ```
 <img src="Imagenes/image6.png" width ="380" height=300><br>
 
-Es hora de crear el archivo `.launch` que lanza el modelo urdf creado. Podremos visualizar el modelo en RViz. El contenido de este archivo se encuentra aquí.
+Es hora de crear el archivo `.launch` que lanza el modelo urdf creado. Podremos visualizar el modelo en RViz. El contenido de este archivo se encuentra [aquí](https://github.com/DMarcelAM/Reto-ROS/blob/main/reto_ros/launch/launch_urdf.launch).
 
 <img src="Imagenes/image8.png" width ="380" height=200><br>
 
@@ -98,7 +98,7 @@ roslaunch reto_ros launch2.launch
 
 ### 1) Creación de los Nodos
 
-Vamos a comenzar creando el archivo `pointcloud2_publisher.py`, donde implementaremos un publisher que publicara un mensaje de tipo PointCloud2. El contenido de este archivo se encuentra aquí.
+Vamos a comenzar creando el archivo `pointcloud2_publisher.py`, donde implementaremos un publisher que publicara un mensaje de tipo PointCloud2. El contenido de este archivo se encuentra [aquí](https://github.com/DMarcelAM/Reto-ROS/blob/main/reto_ros/src/pointcloud2_publisher.py).
 
 <img src="Imagenes/image10.png" width ="380" height=200><br>
 
@@ -114,3 +114,6 @@ Para poder correr nuestro archivo `pointcloud2_publisher.py` y visualizar el tó
 ## **PROBLEMAS**
 
 El mayor problema que tuve en este reto fue en la `Parte 2`, específicamente en la creación del nodo que publica un mensaje del tipo `PointCloud2`. Esto se debe a que hasta ahora, tenía poco conocimiento de este tipo de data y no había trabajado con ella antes. La parte más complicada para mí fue la lectura del archivo `.pcd` para poder publicar el mensaje de tipo `PointCloud2`. Ya que cuando investigaba, la mayor parte de los resultados utilizaba el paquete `pcl_ros` para poder leer archivos `.pcd` de diferentes tipos de `DATA` (`ascii`, `binary` y `binary_compressed`).
+
+
+
