@@ -1,9 +1,8 @@
 # **PAQUETE RETO_ROS**
-***
+
 
 # **Documentación**
 
-***
 
 Este paquete fue creado para participar en el Reto Playtec 2021 y abarca los siguientes temas principalmente:
 
@@ -14,13 +13,13 @@ Este paquete fue creado para participar en el Reto Playtec 2021 y abarca los sig
 \-Visualización de un tópico de tipo *PointCloud2* en RViz
 
 ## **Prerequisitos**
-***
+
 * Ubuntu 18.04
 * ROS Melodic
 * Python 2.7
 
 ## **Uso del paquete**
-***
+
 **1) Comunicación por tópicos con mensajes de tipo *String***
 
 Para poder establecer la comunicación y publicar el mensaje "reto playtec 2021", utilizamos los siguientes comandos:
