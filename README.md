@@ -43,7 +43,7 @@ Usaremos los siguientes comandos para poder visualizar en RViz, el modelo URDF u
 
 <img src="Imagenes/image14.png" width ="550" height=400><br>
 
-Podemos mover las juntas usamos la interfaz GUI mostrada
+Podemos mover las juntas usando la interfaz GUI mostrada
 
 ![Alt Text](Imagenes/gif.gif)
 
