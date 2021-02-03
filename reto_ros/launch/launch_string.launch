@@ -1,0 +1,12 @@
+<launch>
+
+  <arg name="publisher_node_name" default="string_publisher"/>
+  <arg name="subscriber_node_name" default="string_subscriber"/>
+  <arg name="topic_content" default="reto playtec 2021"/>
+
+  <param name="topic_content" value="$(arg topic_content)"/>
+
+  <node pkg="reto_ros" type="string_publisher.py" name="$(arg publisher_node_name)" output="screen"/>
+  <node pkg="reto_ros" type="string_subscriber.py" name="$(arg subscriber_node_name)" output="screen"/>
+
+</launch>

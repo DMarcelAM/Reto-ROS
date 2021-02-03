@@ -1,0 +1,13 @@
+<launch>
+
+  <arg name="topic_frequency" default="2"/>
+  <arg name="filename" default="example"/>
+  <arg name="rvizconfig" value="$(arg filename)"/>
+
+  <param name="topic_frequency" value="$(arg topic_frequency)"/>
+  <param name="path" value="/$(find reto_ros)/pcd_files/$(arg filename).pcd"/>
+
+  <node name="pc2_publisher" pkg="reto_ros" type="pointcloud2_publisher.py" output="screen"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find reto_ros)/rviz_config/$(arg rvizconfig).rviz" required="true" />
+
+</launch>

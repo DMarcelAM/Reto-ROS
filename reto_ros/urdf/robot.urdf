@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+
+<robot name="reto_robot">
+
+  <material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
+
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+
+  <material name="red">
+    <color rgba="0.8 0 0 1"/>
+  </material>
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.3" radius="0.3"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+
+  <link name="second_link">
+    <visual>
+      <geometry>
+        <box size="0.2 0.4 0.8"/>
+      </geometry>
+      <material name="white"/>
+      <origin xyz="0 0 0.4"/>
+    </visual>
+  </link>
+
+  <joint name="base_to_second_link" type="continuous">
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="second_link"/>
+    <origin xyz="0 0 0.15"/>
+  </joint>
+
+  <link name="third_link">
+    <visual>
+      <geometry>
+        <box size="0.68 0.68 0.68"/>
+      </geometry>
+      <material name="red"/>
+      <origin xyz="0 0 0.34"/>
+    </visual>
+  </link>
+
+  <joint name="second_to_third_link" type="revolute">
+    <axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="-1.57" upper="1.57" velocity="0.5"/>
+    <parent link="second_link"/>
+    <child link="third_link"/>
+    <origin xyz="0 0 0.8"/>
+  </joint>
+
+  <link name="fourth_link">
+    <visual>
+      <geometry>
+        <box size="0.34 0.025 0.025"/>
+      </geometry>
+      <material name="white"/>
+      <origin xyz="-0.17 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="third_to_fourth_link" type="prismatic">
+    <limit effort="1000.0" lower="0" upper="0.34" velocity="0.5"/>
+    <parent link="third_link"/>
+    <child link="fourth_link"/>
+    <origin xyz="0.34 -0.17 0.51"/>
+  </joint>
+
+  <link name="fifth_link">
+    <visual>
+      <geometry>
+        <box size="0.34 0.025 0.025"/>
+      </geometry>
+      <material name="white"/>
+      <origin xyz="-0.17 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="third_to_fifth_link" type="prismatic">
+    <limit effort="1000.0" lower="0" upper="0.34" velocity="0.5"/>
+    <parent link="third_link"/>
+    <child link="fifth_link"/>
+    <origin xyz="0.34 0.17 0.51"/>
+  </joint>
+
+  <link name="sixth_link">
+    <visual>
+      <geometry>
+        <box size="0.15 0.15 0.15"/>
+      </geometry>
+      <material name="blue"/>
+      <origin xyz="0.075 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="fourth_to_sixth_link" type="fixed">
+    <parent link="fourth_link"/>
+    <child link="sixth_link"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+  <link name="seventh_link">
+    <visual>
+      <geometry>
+        <box size="0.15 0.15 0.15"/>
+      </geometry>
+      <material name="blue"/>
+      <origin xyz="0.075 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="fifth_to_seventh_link" type="fixed">
+    <parent link="fifth_link"/>
+    <child link="seventh_link"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
+</robot>
